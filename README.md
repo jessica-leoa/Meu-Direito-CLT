@@ -10,8 +10,6 @@
 ![Version](https://img.shields.io/github/v/tag/jessica-leoa/Meu-Direito-CLT)
 # Meu-Direito-CLT
 
-## 📖 Sobre Meu Direito CLT
-
 ## 📖 Sobre o Projeto
 **Meu Direito CLT** é um **software open source** criado para democratizar o acesso à informação sobre os direitos trabalhistas no Brasil.  
 O projeto nasceu da percepção de que muitos trabalhadores não conhecem seus direitos previstos na CLT e acabam sofrendo abusos ou se sentindo culpados por situações injustas no ambiente de trabalho.    
