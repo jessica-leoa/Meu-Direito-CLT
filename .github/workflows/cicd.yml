@@ -22,7 +22,7 @@ jobs:
           cache: 'npm'
 
       - name: 📦 Instalar dependências
-        run: npm ci
+        run: npm i
 
       - name: 🔧 Compilar o projeto
         run: npm run build
