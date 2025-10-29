@@ -1,4 +1,4 @@
-name: CI/CD - Labon API
+name: CI/CD - Meu Direito CLT API
 
 on:
   push:
