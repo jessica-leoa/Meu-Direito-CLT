@@ -44,9 +44,9 @@ Atualmente, o projeto conta com **três módulos principais**, todos com testes 
 
 | Módulo          | Descrição                                                                                  | Endpoint                     |
 | --------------- | ------------------------------------------------------------------------------------------ | ---------------------------- |
-| 🗓️ Férias      | Calcula o valor proporcional de férias + 1/3 constitucional                                | `/api/ferias/calcular`       |
+| 🗓️ Férias      | Calcula o valor proporcional de férias + 1/3 constitucional                                | `/api/simulador/feriasr`       |
 | 💼 Rescisão     | Simula uma rescisão contratual com base no tipo (sem justa causa, pedido de demissão etc.) | `/api/rescisao`              |
-| ⏱️ Horas Extras | Calcula o valor das horas extras com acréscimo de 50% ou 100%                              | `/api/horas-extras/calcular` |
+| ⏱️ Horas Extras | Calcula o valor das horas extras com acréscimo de 50% ou 100%                              | `/api/horas-extras` |
 
 ---
 
@@ -167,9 +167,9 @@ O deploy automático é feito após sucesso nos testes, usando:
 
 | Módulo           | Método | Rota                         | Parâmetros (JSON)                                                                                                    | Exemplo de Saída                                                       |
 | ---------------- | ------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| **Férias**       | `POST` | `/api/ferias/calcular`       | `{ "salarioMensal": 3000, "mesesTrabalhados": 6 }`                                                                   | `{ "feriasProporcionais": 1500, "umTercoFerias": 500, "total": 2000 }` |
+| **Férias**       | `POST` | `/api/simulador/ferias`       | `{ "salario": 3000, "mesesTrabalhados": 6 }`                                                                   | `{ "valorFerias": 1500,  "valorUmTerco": 500,  "totalReceber": 2000,"diasDeFerias": 15,"prazoPagamento": "O pagamento deve ser feito até 2 dias antes do início das férias." }` |
 | **Rescisão**     | `POST` | `/api/rescisao`              | `{ "salarioMensal": 3000, "mesesTrabalhados": 6, "avisoPrevioIndenizado": true, "tipoRescisao": "sem_justa_causa" }` | `{ "resumo": [...], "descontos": [...], "totalLiquido": 6079.71 }`     |
-| **Horas Extras** | `POST` | `/api/horas-extras/calcular` | `{ "salarioMensal": 3000, "horasExtras": 10, "percentualAdicional": 50 }`                                            | `{ "valorHora": 13.63, "valorTotal": 204.45 }`                         |
+| **Horas Extras** | `POST` | `/api/horas-extras/` | `{ "salarioMensal": 3000, "horasExtras": 10, "percentualAdicional": 50 }` |`{"valorHora": 13.64,"valorHoraExtra": 20.45,"totalHorasExtras": 204.55, "salarioComHorasExtras": 3204.55}` |
 
 ---
 

@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Rotas doS móduloS
-app.use('/api/ferias', feriasRoutes);
+app.use('/api', feriasRoutes);
 app.use("/api", rescisaoRoutes);
 app.use('/api', horasExtrasRoutes);
 
