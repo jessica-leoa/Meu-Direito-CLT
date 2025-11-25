@@ -4,6 +4,7 @@ import cors from "cors";
 import feriasRoutes from './modules/ferias/feriasRoutes';
 import rescisaoRoutes from "./modules/rescisao/rescisaoRoutes";
 import horasExtrasRoutes from './modules/horasExtras/horasExtrasRoutes';
+import chatbotRoutes from './modules/chatbot/chatbotRoutes'; 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use('/api', feriasRoutes);
 app.use("/api", rescisaoRoutes);
 app.use('/api', horasExtrasRoutes);
+app.use('/api', chatbotRoutes);
 
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
