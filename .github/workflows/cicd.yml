@@ -27,7 +27,12 @@ jobs:
       - name: 🔧 Compilar o projeto
         run: npm run build
 
+      # --- AQUI ESTÁ A CORREÇÃO ---
       - name: 🧪 Rodar testes
+        env:
+          # Injetamos a chave para que o construtor do Chatbot não dê erro.
+          # Como você já cadastrou o segredo no GitHub, ele vai pegar de lá.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} 
         run: npm test
 
   deploy:
